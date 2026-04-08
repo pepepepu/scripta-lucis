@@ -1,0 +1,7 @@
+export const phrases = [
+  "RED FLAG ANDANTE",
+  "SEINT BLUT IST MEINE BLUT",
+  "ES SOLO UN MOMENTO",
+  "EGO SUM LUX MUNDI",
+  "SCRIPTA LUCIS",
+];

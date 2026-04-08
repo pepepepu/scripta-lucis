@@ -1,0 +1,182 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100%;
+  background-color: var(--color-white);
+  box-sizing: border-box;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  will-change: transform, opacity, filter;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2dvh;
+  color: var(--color-black);
+}
+
+.headerTitle {
+  font-family: "Besley", serif;
+  font-weight: 500;
+  font-size: clamp(1rem, 2.5dvh, 1.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 1dvh;
+}
+
+.itemWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blockItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.blockItem:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.blockText {
+  font-family: "Besley", serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 3.5dvh, 2.5rem);
+  color: var(--color-black);
+  text-transform: uppercase;
+  border: 1px solid var(--color-black);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  transition: background-color 0.4s ease;
+  padding: 0.5dvh 3vw;
+  margin-bottom: 0.5dvh;
+}
+
+.blockNumber {
+  font-family: "Besley", serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4.5dvh, 3.5rem);
+  color: var(--color-black);
+  text-transform: uppercase;
+  border: 1px solid var(--color-black);
+  border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+  transition: background-color 0.4s ease;
+  padding: 0.5dvh 4vw;
+}
+
+.blockItem:hover .blockText,
+.blockItem:hover .blockNumber {
+  background-color: var(--color-yellow);
+}
+
+.backButton {
+  font-family: "Besley", serif;
+  font-weight: 400;
+  font-size: clamp(0.7rem, 1.5dvh, 1rem);
+  color: var(--color-gray);
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5dvh;
+  transition: color 0.3s ease;
+}
+
+.backButton:hover {
+  color: var(--color-yellow);
+}
+
+.blockTitle {
+  font-family: "Besley", serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4dvh, 2.5rem);
+  color: var(--color-yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2dvh;
+  text-align: center;
+}
+
+.songsGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.songItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5dvh 3vw;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  text-decoration: none;
+}
+
+.songItem:hover {
+  background-color: var(--color-yellow);
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.songTitle {
+  font-family: "Besley", serif;
+  font-weight: 500;
+  font-size: clamp(1rem, 2.8dvh, 1.5rem);
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.lineWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0.2dvh 0;
+}
+
+.connectingLine {
+  width: 2px;
+  background-color: var(--color-black);
+  border-radius: 10px;
+}
+
+.footer {
+  font-family: "Besley", serif;
+  font-weight: 400;
+  font-size: clamp(0.6rem, 1.5dvh, 0.875rem);
+  color: var(--color-black);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-top: 1dvh;
+}

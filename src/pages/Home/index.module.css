@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-yellow);
+  padding: 40px;
+  border: 5px solid var(--color-yellow);
+
+  box-shadow:
+    inset 0 0 0 10px transparent,
+    inset 0 0 0 3px var(--color-black);
+}
+
+.header {
+  font-family: "Besley", serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--color-black);
+  will-change: transform, opacity, filter;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+}
+
+.title {
+  font-family: "Besley", serif;
+  font-weight: 500;
+  font-size: 3.5rem;
+  text-align: center;
+  color: var(--color-black);
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.space {
+  display: inline-block;
+  white-space: pre;
+}
+
+.char {
+  display: inline-block;
+  will-change: transform, opacity, filter;
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  will-change: transform, opacity, filter;
+}
+
+.startButton {
+  font-family: "Besley", serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-black);
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
