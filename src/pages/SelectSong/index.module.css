@@ -1,10 +1,33 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
+  min-height: 100vh;
   width: 100%;
   background-color: var(--color-white);
-  box-sizing: border-box;
+  padding: 40px;
+  overflow-x: hidden;
+}
+
+.viewHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  z-index: 10;
+}
+
+.headerIcon {
+  width: 48px;
+  height: 48px;
+  color: var(--color-black);
+}
+
+.headerTitle {
+  font-family: "Besley", serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-black);
+  text-transform: uppercase;
 }
 
 .mainContent {
@@ -14,7 +37,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
 }
 
 .listContainer {
@@ -23,28 +45,17 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
   will-change: transform, opacity, filter;
 }
 
-.headerWrapper {
+.blocksGrid {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2dvh;
-  color: var(--color-black);
+  width: 100%;
 }
 
-.headerTitle {
-  font-family: "Besley", serif;
-  font-weight: 500;
-  font-size: clamp(1rem, 2.5dvh, 1.5rem);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: 1dvh;
-}
-
-.itemWrapper {
+.blockWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,26 +79,25 @@
 .blockText {
   font-family: "Besley", serif;
   font-weight: 700;
-  font-size: clamp(1.2rem, 3.5dvh, 2.5rem);
+  font-size: 10dvw;
   color: var(--color-black);
   text-transform: uppercase;
   border: 1px solid var(--color-black);
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   transition: background-color 0.4s ease;
-  padding: 0.5dvh 3vw;
-  margin-bottom: 0.5dvh;
+  padding: 2px;
 }
 
 .blockNumber {
   font-family: "Besley", serif;
   font-weight: 700;
-  font-size: clamp(1.5rem, 4.5dvh, 3.5rem);
+  font-size: 10dvw;
   color: var(--color-black);
   text-transform: uppercase;
   border: 1px solid var(--color-black);
   border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
   transition: background-color 0.4s ease;
-  padding: 0.5dvh 4vw;
+  padding: 2px;
 }
 
 .blockItem:hover .blockText,
@@ -98,13 +108,14 @@
 .backButton {
   font-family: "Besley", serif;
   font-weight: 400;
-  font-size: clamp(0.7rem, 1.5dvh, 1rem);
-  color: var(--color-gray);
+  font-size: 0.875rem;
+  color: var(--color-black);
   background: transparent;
   border: none;
   text-transform: uppercase;
+  text-decoration: underline;
   letter-spacing: 0.1em;
-  margin-bottom: 1.5dvh;
+  margin-bottom: 2rem;
   transition: color 0.3s ease;
 }
 
@@ -112,30 +123,30 @@
   color: var(--color-yellow);
 }
 
-.blockTitle {
-  font-family: "Besley", serif;
-  font-weight: 700;
-  font-size: clamp(1.5rem, 4dvh, 2.5rem);
-  color: var(--color-yellow);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 2dvh;
-  text-align: center;
-}
-
 .songsGrid {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 600px;
+}
+
+.songWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.motionWrapper {
+  width: 100%;
 }
 
 .songItem {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5dvh 3vw;
+  width: 100%;
+  padding: 3px;
   color: var(--color-black);
   border: 1px solid var(--color-black);
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
@@ -145,38 +156,53 @@
 
 .songItem:hover {
   background-color: var(--color-yellow);
-  transform: scale(1.05) rotate(-2deg);
 }
 
 .songTitle {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 0.3rem;
+  column-gap: 1.5rem;
+}
+
+.word {
+  display: flex;
+  flex-grow: 1;
   font-family: "Besley", serif;
   font-weight: 500;
-  font-size: clamp(1rem, 2.8dvh, 1.5rem);
+  font-size: 4dvw;
   color: var(--color-black);
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+}
+
+.char {
+  display: inline-block;
 }
 
 .lineWrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 0.2dvh 0;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  z-index: 0;
 }
 
 .connectingLine {
   width: 2px;
   background-color: var(--color-black);
-  border-radius: 10px;
+  transform-origin: center;
 }
 
 .footer {
-  font-family: "Besley", serif;
-  font-weight: 400;
-  font-size: clamp(0.6rem, 1.5dvh, 0.875rem);
-  color: var(--color-black);
+  margin-top: 2rem;
+  width: 100%;
   text-align: center;
+  font-family: "Besley", serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-black);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding-top: 1dvh;
 }
