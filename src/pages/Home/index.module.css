@@ -52,7 +52,6 @@
   align-items: center;
   justify-content: center;
   flex: 1;
-  width: 100%;
   position: relative;
   z-index: 1;
 }
@@ -60,14 +59,13 @@
 .title {
   font-family: "Besley", serif;
   font-weight: 500;
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-align: center;
-  padding: 5px;
-  background-color: var(--color-yellow);
   color: var(--color-black);
   letter-spacing: -0.05em;
   text-transform: uppercase;
   line-height: 1.2;
+  background-color: var(--color-yellow);
 }
 
 .word {

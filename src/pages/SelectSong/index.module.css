@@ -79,7 +79,7 @@
 .blockText {
   font-family: "Besley", serif;
   font-weight: 700;
-  font-size: 10dvw;
+  font-size: 8dvw;
   color: var(--color-black);
   text-transform: uppercase;
   border: 1px solid var(--color-black);
@@ -91,7 +91,7 @@
 .blockNumber {
   font-family: "Besley", serif;
   font-weight: 700;
-  font-size: 10dvw;
+  font-size: 8dvw;
   color: var(--color-black);
   text-transform: uppercase;
   border: 1px solid var(--color-black);
